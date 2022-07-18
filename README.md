@@ -13,11 +13,11 @@ This is a very simple library that I made for one of my projects, so there might
 
 # Information
 
-[![Python](https://img.shields.io/pypi/pyversions/dislash.py.svg)](https://pypi.python.org/pypi/canvacord)
-[![PyPi](https://img.shields.io/pypi/v/canvacord.svg)](https://pypi.org/project/canvacord)
+[![Python](https://img.shields.io/pypi/pyversions/dislash.py.svg)](https://pypi.python.org/pypi/easyencryption)
+[![PyPi](https://img.shields.io/pypi/v/easyencryption.svg)](https://pypi.org/project/easyencryption)
 
 # Downloads
 
-[![Downloads](https://pepy.tech/badge/canvacord)](https://pepy.tech/project/canvacord)
-[![Downloads](https://pepy.tech/badge/canvacord/month)](https://pepy.tech/project/canvacord)
-![Downloads](https://pepy.tech/badge/canvacord/week)
+[![Downloads](https://pepy.tech/badge/easyencryption)](https://pepy.tech/project/easyencryption)
+[![Downloads](https://pepy.tech/badge/easyencryption/month)](https://pepy.tech/project/easyencryption)
+![Downloads](https://pepy.tech/badge/easyencryption/week)
