@@ -4,3 +4,11 @@ from .pubprivate import pubprivencrypt
 from .pubprivate import pubprivdecrypt
 from .aes import aesencrypt
 from .aes import aesdecrypt
+from .sha import sha224encrypt
+from .sha import sha224check
+from .sha import sha256encrypt
+from .sha import sha256check
+from .sha import sha384encrypt
+from .sha import sha384check
+from .sha import sha512encrypt
+from .sha import sha512check

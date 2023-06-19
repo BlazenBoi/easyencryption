@@ -1,4 +1,5 @@
 setuptools>=42
 cryptography
 pycryptodomex
+pycryptodome
 wheel
