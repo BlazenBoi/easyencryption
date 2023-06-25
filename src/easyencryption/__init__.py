@@ -12,3 +12,7 @@ from .sha import sha384encrypt
 from .sha import sha384check
 from .sha import sha512encrypt
 from .sha import sha512check
+from .custom import customencrypt
+from .custom import customdecrypt
+from .custom import customencrypttimes
+from .custom import customdecrypttimes
