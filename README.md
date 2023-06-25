@@ -22,4 +22,4 @@ This is a very simple library that I made for one of my projects, so there might
 
 [![Downloads](https://pepy.tech/badge/easyencryption)](https://pepy.tech/project/easyencryption)
 [![Downloads](https://pepy.tech/badge/easyencryption/month)](https://pepy.tech/project/easyencryption)
-[![Downloads](https://pepy.tech/badge/easyencryption/week)(https://pepy.tech/project/easyencryption)
+[![Downloads](https://pepy.tech/badge/easyencryption/week)](https://pepy.tech/project/easyencryption)
