@@ -1,7 +1,6 @@
 import base64
 import hashlib
 from Cryptodome.Cipher import AES
-from Cryptodome.Random import get_random_bytes
 from Crypto import Random
 
 async def genkey():
@@ -30,7 +29,7 @@ async def aesencrypt(slogan):
     pad = lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
 
     slogan = base64.b64encode(pad(slogan).encode('utf8'))
-    iv = get_random_bytes(AES.block_size)
+    iv = Random.get_random_bytes(AES.block_size)
     cipher = AES.new(key=key, mode= AES.MODE_CFB,iv= iv)
     return base64.b64encode(iv + cipher.encrypt(slogan))
 

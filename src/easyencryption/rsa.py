@@ -1,6 +1,5 @@
 from Crypto.PublicKey import RSA as rsa
-from Crypto.Random import get_random_bytes
-from Crypto.Cipher import AES, PKCS1_OAEP
+from Crypto.Cipher import PKCS1_OAEP
 import os
 
 async def genkeys():
@@ -49,13 +48,13 @@ async def callprivkey():
     key = rsa.import_key(key)
     return key
 
-async def pubprivencrypt(slogan):
+async def rsaencrypt(slogan):
     key = await callpubkey()
     encryptor = PKCS1_OAEP.new(key)
     coded_slogan = encryptor.encrypt(slogan.encode("utf-8"))
     return coded_slogan
 
-async def pubprivdecrypt(coded_slogan):
+async def rsadecrypt(coded_slogan):
     key = await callprivkey()
     decryptor = PKCS1_OAEP.new(key)
     decoded_slogan = decryptor.decrypt(coded_slogan)
