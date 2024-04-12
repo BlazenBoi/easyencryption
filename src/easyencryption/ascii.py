@@ -1,7 +1,6 @@
-import random
-import math
+import random, math
 
-async def customencrypt(string:str):
+async def asciiencrypt(string:str):
     asciis = []
     biggest = 0
     for char in enumerate(string):
@@ -20,7 +19,7 @@ async def customencrypt(string:str):
     finalstring = firststring + middle + secondstring
     return finalstring
 
-async def customdecrypt(string:str):
+async def asciidecrypt(string:str):
     middle = string[(len(string)-1)//2:(len(string)+2)//2]
     randadd = ord(middle) - 65
     h = len(string)//2
@@ -34,17 +33,3 @@ async def customdecrypt(string:str):
         finalstring += chr(ord(encoded[iternum]) - add - randadd)
         iternum += 1
     return finalstring
-
-async def customencrypttimes(string:str, times:int):
-    iternum = 0
-    while iternum < times:
-        string = await customencrypt(string)
-        iternum += 1
-    return string
-
-async def customdecrypttimes(string:str, times:int):
-    iternum = 0
-    while iternum < times:
-        string = await customdecrypt(string)
-        iternum += 1
-    return string

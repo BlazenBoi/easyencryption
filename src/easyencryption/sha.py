@@ -1,23 +1,21 @@
-import hashlib
-import codecs
-import secrets
+import hashlib, codecs, secrets
 
 async def gensalt():
     generated_salt = secrets.token_hex(32)
-    with open("hashsalt.key", "wb") as key_file:
+    with open("shasalteasyencryption.key", "wb") as key_file:
         key_file.write(codecs.encode(generated_salt))
     return generated_salt
 
 async def callsalt():
   try:
-    key = open("hashsalt.key", "rb").read()
+    key = open("shasalteasyencryption.key", "rb").read()
     if str(key) == "b''":
       await gensalt()
-      key = open("hashsalt.key", "rb").read()
+      key = open("shasalteasyencryption.key", "rb").read()
     return key
   except:
     await gensalt()
-    key = open("hashsalt.key", "rb").read()
+    key = open("shasalteasyencryption.key", "rb").read()
     return key
 
 async def sha224encrypt(string:str):

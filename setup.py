@@ -4,9 +4,7 @@ import pathlib
 here = pathlib.Path(__file__).parent.resolve()
 long_desc = open("README.md", "r")
 long_description = long_desc.read()
-##with open('src/easyencryption/__init__.py', 'r') as f:
-    ##version = [line.split('=')[1].strip(" '\"") for line in f.read().splitlines() if line.startswith('__version__')][0]
-version = "0.1.7"
+version = "0.1.8.5"
 
 setup(
     name='easyencryption',
@@ -26,7 +24,8 @@ setup(
     "cryptography",
     "pycryptodomex",
     "pycryptodome",
-    "wheel"
+    "wheel",
+    "eciespy"
     ],
     project_urls={
         'Discord Server': 'https://discord.com/invite/mPU3HybBs9',

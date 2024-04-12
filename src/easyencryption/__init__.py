@@ -1,18 +1,10 @@
-from .fernet import fernetencrypt
-from .fernet import fernetdecrypt
-from .rsa import rsaencrypt
-from .rsa import rsadecrypt
-from .aes import aesencrypt
-from .aes import aesdecrypt
-from .sha import sha224encrypt
-from .sha import sha224check
-from .sha import sha256encrypt
-from .sha import sha256check
-from .sha import sha384encrypt
-from .sha import sha384check
-from .sha import sha512encrypt
-from .sha import sha512check
-from .custom import customencrypt
-from .custom import customdecrypt
-from .custom import customencrypttimes
-from .custom import customdecrypttimes
+from .fernet import fernetencrypt, fernetdecrypt, multifernetencrypt, multifernetdecrypt
+from .rsa import rsaencrypt, rsadecrypt
+from .aes import aesencrypt, aesdecrypt
+from .sha import sha224encrypt, sha224check, sha256encrypt, sha256check, sha384encrypt, sha384check, sha512encrypt, sha512check
+from .ascii import asciiencrypt, asciidecrypt
+from .ecc import eccencrypt, eccdecrypt
+from .xor import xorencrypt, xordecrypt
+from .blake import blakeencrypt, blakecheck
+from .shake import shake128encrypt, shake128check, shake256encrypt, shake256check
+from .xor import xorencrypt, xordecrypt

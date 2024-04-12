@@ -1,9 +1,9 @@
-from Crypto.PublicKey import RSA as rsa
-from Crypto.Cipher import PKCS1_OAEP
 import os
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
 
 async def genkeys():
-    key = rsa.generate(2048)
+    key = RSA.generate(2048)
     publickey = key.publickey().export_key()
     privatekey = key.export_key()
     with open("pubeasyencryption.key", "wb") as pub_key_file:
@@ -26,12 +26,12 @@ async def callpubkey():
     if str(key) == "b''":
       await genkeys()
       key = open("pubeasyencryption.key", "rb").read()
-    key = rsa.import_key(key)
+    key = RSA.import_key(key)
     return key
   except:
     await genkeys()
     key = open("pubeasyencryption.key", "rb").read()
-    key = rsa.import_key(key)
+    key = RSA.import_key(key)
     return key
 
 async def callprivkey():
@@ -40,21 +40,21 @@ async def callprivkey():
     if str(key) == "b''":
       await genkeys()
       key = open("priveasyencryption.key", "rb").read()
-    key = rsa.import_key(key)
+    key = RSA.import_key(key)
     return key
   except:
     await genkeys()
     key = open("priveasyencryption.key", "rb").read()
-    key = rsa.import_key(key)
+    key = RSA.import_key(key)
     return key
 
-async def rsaencrypt(slogan):
+async def rsaencrypt(slogan:str):
     key = await callpubkey()
     encryptor = PKCS1_OAEP.new(key)
     coded_slogan = encryptor.encrypt(slogan.encode("utf-8"))
     return coded_slogan
 
-async def rsadecrypt(coded_slogan):
+async def rsadecrypt(coded_slogan:bytes):
     key = await callprivkey()
     decryptor = PKCS1_OAEP.new(key)
     decoded_slogan = decryptor.decrypt(coded_slogan)

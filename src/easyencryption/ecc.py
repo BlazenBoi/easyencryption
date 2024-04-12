@@ -1,9 +1,7 @@
-from ecies.utils import generate_key
-from ecies import encrypt, decrypt
-import codecs
+import codecs, ecies
 
 async def genkeys():
-    secp_k = generate_key()
+    secp_k = ecies.utils.generate_key()
     sk_bytes = secp_k.secret  # bytes
     pk_bytes = secp_k.public_key.format(True)
     with open("eccseasyencryption.key", "wb") as pub_key_file:
@@ -37,14 +35,14 @@ async def callpkey():
     key = open("eccpeasyencryption.key", "rb").read()
     return key
 
-async def eccencrypt(slogan):
+async def eccencrypt(slogan:str):
     data = codecs.encode(slogan)
     pk_bytes = await callpkey()  # bytes
-    encrypted = encrypt(pk_bytes, data)
+    encrypted = ecies.encrypt(pk_bytes, data)
     return encrypted
 
-async def eccdecrypt(coded_slogan):
+async def eccdecrypt(coded_slogan:bytes):
     sk_bytes = await callskey()  # bytes
-    decrypted_byted = decrypt(sk_bytes, coded_slogan)
+    decrypted_byted = ecies.decrypt(sk_bytes, coded_slogan)
     decrypted = codecs.decode(decrypted_byted)
     return decrypted

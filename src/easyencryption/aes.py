@@ -1,10 +1,8 @@
-import base64
-import hashlib
+import base64, hashlib, Crypto
 from Cryptodome.Cipher import AES
-from Crypto import Random
 
 async def genkey():
-    generated_key = Random.new().read(AES.block_size)
+    generated_key = Crypto.Random.new().read(AES.block_size)
     key = hashlib.sha256(generated_key).digest()
     with open("aeseasyencryption.key", "wb") as key_file:
         key_file.write(key)
@@ -22,18 +20,17 @@ async def callkey():
     key = open("aeseasyencryption.key", "rb").read()
     return key
 
-
-async def aesencrypt(slogan):
+async def aesencrypt(slogan:str):
     key = await callkey()
     BS = AES.block_size
     pad = lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
 
     slogan = base64.b64encode(pad(slogan).encode('utf8'))
-    iv = Random.get_random_bytes(AES.block_size)
+    iv = Crypto.Random.get_random_bytes(AES.block_size)
     cipher = AES.new(key=key, mode= AES.MODE_CFB,iv= iv)
     return base64.b64encode(iv + cipher.encrypt(slogan))
 
-async def aesdecrypt(coded_slogan):
+async def aesdecrypt(coded_slogan:bytes):
     key = await callkey()
     unpad = lambda s: s[:-ord(s[-1:])]
 
