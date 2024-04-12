@@ -1,6 +1,6 @@
 import asyncio
 
-from aes import aesencrypt, aesdecrypt
+from .aes import aesencrypt, aesdecrypt
 
 teststr = "TestString"
 
