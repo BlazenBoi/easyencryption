@@ -9,4 +9,4 @@ async def aestest():
       dstr = await aesdecrypt(estr)
       return teststr == dstr
 
-asyncio.run(aestest)
+asyncio.run(aestest())
