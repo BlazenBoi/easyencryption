@@ -4,7 +4,7 @@ import pathlib
 here = pathlib.Path(__file__).parent.resolve()
 long_desc = open("README.md", "r")
 long_description = long_desc.read()
-version = "0.1.8.6"
+version = "0.1.8.7"
 
 setup(
     name='easyencryption',
@@ -25,8 +25,7 @@ setup(
     "pycryptodomex",
     "pycryptodome",
     "wheel",
-    "eciespy",
-    "os"
+    "eciespy"
     ],
     project_urls={
         'Discord Server': 'https://discord.com/invite/mPU3HybBs9',

@@ -4,4 +4,3 @@ pycryptodomex
 pycryptodome
 wheel
 eciespy
-os
