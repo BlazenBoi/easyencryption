@@ -10,6 +10,7 @@ src/easyencryption/fernet.py
 src/easyencryption/rsa.py
 src/easyencryption/sha.py
 src/easyencryption/shake.py
+src/easyencryption/test_all.py
 src/easyencryption/xor.py
 src/easyencryption.egg-info/PKG-INFO
 src/easyencryption.egg-info/SOURCES.txt
