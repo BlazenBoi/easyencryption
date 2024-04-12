@@ -7,4 +7,3 @@ from .ecc import eccencrypt, eccdecrypt
 from .xor import xorencrypt, xordecrypt
 from .blake import blakeencrypt, blakecheck
 from .shake import shake128encrypt, shake128check, shake256encrypt, shake256check
-from .xor import xorencrypt, xordecrypt
