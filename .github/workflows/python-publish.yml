@@ -58,9 +58,9 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
+        rm -f dist/empty.file
         python -m pip install --upgrade pip
         pip install build
-        rm -f dist/empty.file
     - name: Build package
       run: python -m build
     - name: Publish package
