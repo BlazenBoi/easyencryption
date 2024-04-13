@@ -18,7 +18,7 @@ setup(
     author_email='contact@fireballbot.com',
     keywords='',
     packages=find_packages(include=['easyencryption']),
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     install_requires=[
     "setuptools>=42",
     "cryptography",
