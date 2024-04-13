@@ -4,7 +4,7 @@ import pathlib
 here = pathlib.Path(__file__).parent.resolve()
 long_desc = open("README.md", "r")
 long_description = long_desc.read()
-version = "1.0.0.0"
+version = "3.0.0.0"
 
 setup(
     name='easyencryption',
