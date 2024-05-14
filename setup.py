@@ -5,6 +5,7 @@ here = pathlib.Path(__file__).parent.resolve()
 long_desc = open("README.md", "r")
 long_description = long_desc.read()
 version = "3.0.0.1"
+print(find_packages(include=['easyencryption']))
 
 setup(
     name='easyencryption',

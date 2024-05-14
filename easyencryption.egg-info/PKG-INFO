@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: easyencryption
-Version: 1.0.0.0
+Version: 3.0.0.1
 Summary: A very easy way to encrypt data.
 Home-page: https://github.com/BlazenBoi/easyencryption/issues
 Author: Blazen
@@ -30,7 +30,6 @@ Requires-Dist: cryptography
 Requires-Dist: pycryptodomex
 Requires-Dist: pycryptodome
 Requires-Dist: wheel
-Requires-Dist: eciespy
 
 In Progress...
 
