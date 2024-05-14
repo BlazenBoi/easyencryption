@@ -3,4 +3,3 @@ cryptography
 pycryptodomex
 pycryptodome
 wheel
-eciespy

@@ -25,7 +25,6 @@ setup(
     "pycryptodomex",
     "pycryptodome",
     "wheel",
-    "eciespy",
     ],
     project_urls={
         'Discord Server': 'https://discord.com/invite/mPU3HybBs9',
