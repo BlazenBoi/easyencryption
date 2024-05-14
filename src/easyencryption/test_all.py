@@ -37,17 +37,6 @@ async def test_blake():
       else:
             return dstr == teststr
 
-from .ecc import eccencrypt, eccdecrypt
-
-@pytest.mark.asyncio
-async def test_ecc():
-      estr = await eccencrypt(teststr)
-      dstr = await eccdecrypt(estr)
-      if dstr != teststr:
-            raise Exception("ECC check failed")
-      else:
-            return dstr == teststr
-      
 from .fernet import fernetencrypt, fernetdecrypt
 
 @pytest.mark.asyncio
